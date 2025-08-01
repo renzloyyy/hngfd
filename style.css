@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: 'Indie Flower', cursive;
+  background: #fff0f6;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background: #ffe6f0;
+  font-family: 'Pacifico', cursive;
+  color: #d6336c;
+}
+
+.subtitle {
+  font-family: 'Indie Flower', cursive;
+  margin-top: 0.5rem;
+}
+
+.collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.note {
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+.note:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+
+/* Note colors */
+.pink { background-color: #ffc9de; }
+.yellow { background-color: #fff4a3; }
+.blue { background-color: #d0f0ff; }
+.green { background-color: #d6f5d6; }
+
+.photo img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.photo:hover img {
+  transform: scale(1.03);
+}
+
+/* Hanging effect */
+.photo.hang img {
+  border: 3px solid #fff;
+  box-shadow: 2px 4px 15px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.photo.hang img::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background-color: #444;
+  transform: translateX(-50%);
+}
+
+/* Taped corners */
+.photo.taped img {
+  position: relative;
+}
+
+.photo.taped::before, .photo.taped::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background: #fce8b2;
+  transform: rotate(-10deg);
+}
+
+.photo.taped::before {
+  top: -10px;
+  left: -10px;
+}
+
+.photo.taped::after {
+  top: -10px;
+  right: -10px;
+  transform: rotate(10deg);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #ffe6f0;
+  margin-top: 2rem;
+}
+.lily-footer {
+  background: url('assets/lilies.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 1px 2px #000;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.2rem;
+  border-top: 5px double #fff;
+}
+
+.spotify-section {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #fff8fc;
+  border-top: 2px dashed #ffb3c6;
+}
+
+.spotify-section h2 {
+  font-family: 'Pacifico', cursive;
+  color: #d6336c;
+  margin-bottom: 1rem;
+}
+
+.spotify-player {
+  max-width: 400px;
+  margin: 0 auto;
+}
